@@ -17,7 +17,7 @@
     - [ ] NO - Not Yet
 
 3. Please provide a link to the repository you are using for this class.  
-   (https://github.com/doa29/CS-283/new/main)
+   (https://github.com/doa29/CS-283)
 
 4. Briefly describe what you want to get out of this class.  
    I aim to enhance my understanding of systems programming and deepen my expertise in working with Linux environments, especially through hands-on practice using Drexel's Tux cluster.
