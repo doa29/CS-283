@@ -249,7 +249,10 @@ int main(int argc, char *argv[]) {
         usage(argv[0]);
         exit(0);
     }
-
+    if (argc < 3){
+        usage(argv[0]);
+        exit(1);
+    }
     // Yeah, This checks if the user has provided enough arguments for the program 
     // to work. We know the first argument is the flag (like `-c`), and the 
     // second should be the string to process. If the string is missing, we 
