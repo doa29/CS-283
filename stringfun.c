@@ -17,7 +17,7 @@ int setup_buff(char *buff, char *user_str, int len) {
     char last_char = '\0';
     char *str_ptr = user_str;
     
-    // First pass: count the actual length needed after cleaning whitespace
+    
     int clean_length = 0;
     int in_space = 0;
     
@@ -32,15 +32,15 @@ int setup_buff(char *buff, char *user_str, int len) {
         str_ptr++;
     }
     
-    // Check if the cleaned string would fit in buffer
+    
     if (clean_length > len) {
         return -1;  // String too large
     }
     
-    // Reset for actual copying
+    
     str_ptr = user_str;
     
-    // Second pass: actual copying with cleanup
+   
     while (*str_ptr != '\0' && count < len) {
         if (*str_ptr != ' ' && *str_ptr != '\t') {
             buff[count++] = *str_ptr;
@@ -52,19 +52,20 @@ int setup_buff(char *buff, char *user_str, int len) {
         str_ptr++;
     }
     
-    // Remove trailing space if exists
+    
     if (count > 0 && buff[count-1] == ' ') {
         count--;
     }
     
-    // Fill the rest with dots
+    
     for (int i = count; i < len; i++) {
         buff[i] = '.';
     }
     
-    return count;  // Return the length of the actual content (before dots)
+    return count; 
 }
-// Counting words in the buffer
+
+
 int count_words(char *buff, int len) {
     int words = 0, in_word = 0;
 
